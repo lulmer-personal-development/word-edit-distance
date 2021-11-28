@@ -47,6 +47,7 @@ func EditDistance(a, b string) (int, error) {
 	return convertMatrix[aLength][bLength], nil
 }
 
+// Constraints: strings must be 0 to 500 characters and lower case English
 func validateStrings(a, b string, aLength, bLength int) error {
 	if aLength > MAX_STRING_LENGTH || bLength > MAX_STRING_LENGTH {
 		return fmt.Errorf("input string exceeds the maximum length of %d", MAX_STRING_LENGTH)
@@ -70,6 +71,7 @@ func isLowerCaseEnglishChar(char rune) bool {
 	return (char >= 'a' && char <= 'z')
 }
 
+// determine minimum
 func min(a, b, c int) int {
 	if a <= b && a <= c {
 		return a

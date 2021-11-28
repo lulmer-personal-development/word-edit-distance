@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func Test_EditDistanceSuccesses(t *testing.T) {
+func Test_EditDistance(t *testing.T) {
 	cases := []struct {
 		name                string
 		word1               string
